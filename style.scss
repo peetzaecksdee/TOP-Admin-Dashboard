@@ -1,0 +1,97 @@
+$sidebar-color: #0ea5e9;
+$title-size: 1.8rem;
+$theme-color: white;
+$text-size: 1rem;
+
+:root {
+  font-family: Nunito;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template: auto 1fr / 320px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+li {
+  list-style-type: none;
+  & > a {
+    text-decoration: none;
+    color: $theme-color;
+  }
+}
+
+.small {
+  width: 20px;
+  height: 20px;
+}
+
+.white {
+  filter: invert(100%)
+}
+
+.sidebar {
+  grid-area: sidebar;
+  color: $theme-color;
+  background-color: $sidebar-color;
+  padding: 12px 0;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  padding-left: 24px;
+  gap: 42px;
+  font-weight: bold;
+
+  & > * {
+    display: grid;
+  }
+
+  .nav-title {
+    font-size: $title-size;
+    place-items: center;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-areas: 
+    "svg title .";
+    gap: 16px;
+
+    svg {
+      grid-area: svg;
+      width: 42px;
+      height: 42px;
+    }
+
+    & > span {
+      grid-area: title;
+    }
+  }
+}
+
+.main-content > ul,
+.side-content > ul {
+  display: grid;
+  gap: 16px;
+  font-size: $text-size;
+
+  & > li {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
