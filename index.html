@@ -16,7 +16,7 @@
 	</head>
 
 	<body>
-		<nav class="sidebar">
+		<aside class="sidebar bold">
 			<div class="nav-title">
 				<svg class="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-dashboard</title><path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" /></svg>
 				<span>Dashboard</span>
@@ -38,7 +38,7 @@
 					<li><svg class="small white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>lock</title><path d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z" /></svg><a href="#">Privacy</a></li>
 				</ul>
 			</div>
-		</nav>
+		</aside>
 		<header class="header">
 			<div class="header-main">
 				<div class="search">
@@ -48,12 +48,22 @@
 				<div class="user">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bell-ring-outline</title><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" /></svg>
 					<img src="./profile.png" alt="Profile">
-					<span>Peetza ecksdee</span>
+					<span class="bold">Peetza Ecksdee</span>
 				</div>
 			</div>
 			<div class="header-secondary">
-				<div class="profile"></div>
-				<div class="buttons"></div>
+				<div class="profile">
+					<img src="./profile.png" alt="Profile">
+					<div class="profile-name">
+						<span>Hi there, </span>
+						<span class="big bold">Peetza Ecksdee (@peetzalol)</span>
+					</div>
+				</div>
+				<div class="buttons-container">
+					<button class="bold">New</button>
+					<button class="bold">Upload</button>
+					<button class="bold">Share</button>
+				</div>
 			</div>
 		</header>
 		<main class="main">
