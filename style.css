@@ -129,30 +129,35 @@ li > a {
   border: none;
 }
 
-.user {
+.luser {
   height: 50px;
   align-items: center;
   display: grid;
   grid-template-columns: 30px 50px auto;
   gap: 32px;
 }
-.user > svg {
+.luser > svg {
   width: 30px;
   height: 30px;
 }
-.user > svg:hover {
+.luser > svg:hover {
   cursor: pointer;
 }
-.user > img {
+.luser img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-.user > img:hover {
+.luser img:hover {
   cursor: pointer;
 }
-.user > span {
+.luser > span {
   font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .profile {
@@ -160,12 +165,12 @@ li > a {
   grid-template-columns: 100px auto;
   align-items: center;
 }
-.profile > img {
+.profile img {
   border-radius: 50%;
   height: 75px;
   width: 75px;
 }
-.profile > img:hover {
+.profile img:hover {
   cursor: pointer;
 }
 .profile-name {
@@ -199,10 +204,14 @@ li > a {
   grid-area: main;
   background-color: #e2e8f0;
   display: grid;
+  align-items: center;
+}
+.main-container {
+  display: grid;
   grid-template: 1fr 1fr/2fr 1fr;
-  grid-template-areas: "project announcement" "project trending";
-  padding: 24px 16px;
-  gap: 24px 20px;
+  grid-template-areas: "project announcement" "project announcement";
+  padding: 24px 16px 0 16px;
+  gap: 0 20px;
   font-size: 1.2em;
 }
 
@@ -220,7 +229,7 @@ li > a {
 }
 
 .project {
-  height: 200px;
+  height: 225px;
   background-color: white;
   border-radius: 12px;
   box-shadow: 5px 5px 16px -12px hsl(0, 0%, 15%);
@@ -262,17 +271,22 @@ li > a {
   grid-area: announcement;
 }
 .announcement > .container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 50px;
   margin-top: 12px;
-  height: 80%;
+  height: 94%;
 }
-
-.trending {
-  grid-area: trending;
+.announcement > .container h5 {
+  line-height: 1.15;
+}
+.announcement > .container > hr {
+  opacity: 40%;
 }
 
 .container {
   width: 90%;
-  height: 70%;
   background-color: white;
   border-radius: 12px;
   box-shadow: 5px 5px 16px -12px hsl(0, 0%, 15%);

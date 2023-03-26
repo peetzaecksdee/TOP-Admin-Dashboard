@@ -145,7 +145,7 @@ li {
   }
 }
 
-.user {
+.luser {
   height: 50px;
   align-items: center;
   display: grid;
@@ -161,7 +161,7 @@ li {
     }
   }
 
-  & > img {
+  & img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -176,12 +176,17 @@ li {
   }
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .profile {
   display: grid;
   grid-template-columns: 100px auto;
   align-items: center;
 
-  & > img {
+  & img {
     border-radius: 50%;
     height: 75px;
     width: 75px;
@@ -226,13 +231,18 @@ li {
   grid-area: main;
   background-color: $search-bar-color;
   display: grid;
-  grid-template: 1fr 1fr / 2fr 1fr;
-  grid-template-areas: 
-  "project announcement"
-  "project trending";
-  padding: 24px 16px;
-  gap: 24px 20px;
-  font-size: calc($title-size / 1.5);
+  align-items: center;
+  
+  &-container {
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: 
+    "project announcement"
+    "project announcement";
+    padding: 24px 16px 0 16px;
+    gap: 0 20px;
+    font-size: calc($title-size / 1.5);
+  }
 }
 
 .projects {
@@ -250,7 +260,7 @@ li {
 }
 
 .project {
-  height: 200px;
+  height: 225px;
   background-color: $theme-color;
   border-radius: 12px;
   box-shadow: 5px 5px 16px -12px hsl(0, 0%, 15%);
@@ -296,18 +306,25 @@ li {
   grid-area: announcement;
 
   & > .container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 50px;
     margin-top: 12px;
-    height: 80%;
-  }
-}
+    height: 94%;
 
-.trending {
-  grid-area: trending;
+    & h5 {
+      line-height: 1.15;
+    }
+
+    & > hr {
+      opacity: 40%;
+    }
+  }
 }
 
 .container {
   width: 90%;
-  height: 70%;
   background-color: white;
   border-radius: 12px;
   box-shadow: 5px 5px 16px -12px hsl(0, 0%, 15%);
